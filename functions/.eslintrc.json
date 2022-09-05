@@ -15,4 +15,10 @@
     "ecmaVersion": 12
   },
   "ignorePatterns": ["lib/*"],
+  "plugins": ["jsdoc"],
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  }
 }
