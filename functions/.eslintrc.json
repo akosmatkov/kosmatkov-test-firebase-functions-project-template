@@ -1,14 +1,16 @@
 {
   "root": true,
   "env": {
-    "es6": true,
+    "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "google"],
+  "extends": ["eslint:recommended", "google", "plugin:jsdoc/recommended"],
   "rules": {
     "quotes": ["error", "double"],
     "require-jsdoc": "off",
-    "valid-jsdoc": "off"
+    "valid-jsdoc": "off",
+    "jsdoc/require-returns-description": "off",
+    "jsdoc/require-param-description": "off"
   },
   "parserOptions": {
     "sourceType": "module",
