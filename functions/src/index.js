@@ -5,9 +5,9 @@ import {logger, https} from "firebase-functions/v1";
  * @param {import("firebase-functions/v1/https").CallableContext} context
  * @returns {string}
  */
-const getHelloHandler = (data, context) => {
+const helloHandler = (data, context) => {
   logger.info("Hello logs!", {structuredData: true});
   return "Hello from Firebase!";
 };
 
-export const helloWorld = https.onCall(getHelloHandler);
+export const helloWorld = https.onCall(helloHandler);
