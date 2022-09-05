@@ -3,6 +3,7 @@
   "description": "Cloud Functions for Firebase",
   "scripts": {
     "lint": "eslint .",
+    "check": "tsc --project jsconfig.json",
     "build": "swc src --config-file .swcrc -d lib",
     "watch": "swc src --config-file .swcrc -d lib -w",
     "serve": "firebase emulators:start --only functions",
