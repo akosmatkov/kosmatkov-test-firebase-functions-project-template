@@ -6,7 +6,9 @@
   },
   "extends": ["eslint:recommended", "google"],
   "rules": {
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "require-jsdoc": "off",
+    "valid-jsdoc": "off"
   },
   "parserOptions": {
     "sourceType": "module",
