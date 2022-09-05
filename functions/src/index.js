@@ -1,7 +1,7 @@
 import {logger, https} from "firebase-functions/v1";
 
 /**
- * @param {import("firebase-functions/v1").Request} request
+ * @param {import("firebase-functions/v1/https").Request} request
  * @param {import("express").Response} response
  * @returns {void}
  */
