@@ -2,6 +2,7 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
+    "check:full": "npm run lint && npm run check && npm run build && npm run test:only",
     "lint": "eslint .",
     "test": "mocha",
     "check": "tsc --project jsconfig.json",
