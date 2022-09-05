@@ -3,7 +3,7 @@
   "description": "Cloud Functions for Firebase",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha .",
+    "test": "mocha",
     "check": "tsc --project jsconfig.json",
     "build": "swc src --config-file .swcrc -d lib",
     "watch": "swc src --config-file .swcrc -d lib -w",
@@ -11,7 +11,8 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "pretest": "npm run build"
   },
   "engines": {
     "node": "16"
