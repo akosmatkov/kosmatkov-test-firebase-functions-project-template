@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "emulators:start": "firebase emulators:start"
+    "emulators:start": "firebase emulators:start",
+    "format": "npx prettier --write ."
   },
   "private": true,
   "devDependencies": {
