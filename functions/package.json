@@ -12,6 +12,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
+    "test:only": "mocha",
     "pretest": "npm run build"
   },
   "engines": {
