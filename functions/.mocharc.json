@@ -1,0 +1,5 @@
+{
+  "spec": ["./lib/**/*.test.js"],
+  "ignore": ["./node_modules/**/*"],
+  "node-option": ["enable-source-maps"]
+}
