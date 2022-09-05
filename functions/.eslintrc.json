@@ -10,7 +10,8 @@
     "require-jsdoc": "off",
     "valid-jsdoc": "off",
     "jsdoc/require-returns-description": "off",
-    "jsdoc/require-param-description": "off"
+    "jsdoc/require-param-description": "off",
+    "jsdoc/require-returns": "off"
   },
   "parserOptions": {
     "sourceType": "module",
