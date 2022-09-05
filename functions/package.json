@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "eslint .",
     "build": "swc src --config-file .swcrc -d lib",
+    "watch": "swc src --config-file .swcrc -d lib -w",
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
