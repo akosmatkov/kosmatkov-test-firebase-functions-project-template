@@ -14,3 +14,7 @@ This template is made to make it easier to get started with Firebase Functions.
 1. `npm run emulators:start` – starts emulators
 1. `cd functions && npm run watch` – rebuilds source code when changed
 1. `npm run check:full` – run all checks
+
+## Licence
+
+MIT.
