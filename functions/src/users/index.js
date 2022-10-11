@@ -2,10 +2,10 @@ import {logger, https} from "firebase-functions/v1";
 import admin from '../firebase.admin';
 
 /**
- * @param {string} id - Query parameter, id of user
+ * @param {string} req.query.id - Id of user, query parameter,
  * @param {Request} req
  * @param {Response} res
- * @returns {Promise<Record<string, any>>}
+ * @returns {Promise<User>}
  */
 exports.getUserById = https.onRequest(async (req, res) => {
   logger.log('getUserById');
@@ -13,7 +13,7 @@ exports.getUserById = https.onRequest(async (req, res) => {
   try {
     const { id } = req.query;
 
-    const user = await admin.firestore().collection('users').doc(id).get();
+    const user = (await admin.firestore().collection('users').doc(id).get()).data();
 
     if (!user) {
       res.status(404).json('User not found');
@@ -26,11 +26,10 @@ exports.getUserById = https.onRequest(async (req, res) => {
 });
 
 /**
- * @param {Record<string, any>} body - Query parameter, insert/update body
- * @param {string} body.id - Id of user. If user with such id exists it will be updated, otherwise - updated
+ * @param {User} req.body - Query parameter, insert/update body
  * @param {Request} req
  * @param {Response} res
- * @returns {Promise<Record<string, any>>}
+ * @returns {Promise<User>}
  */
 exports.updateUser = https.onRequest(async (req, res) => {
   logger.log('updateUser');
@@ -38,7 +37,7 @@ exports.updateUser = https.onRequest(async (req, res) => {
   try {
     const { body } = req;
 
-    const user = await admin.firestore().collection('users').doc(body.id).set(body);
+    const user = await admin.firestore().collection('users').doc(body.id).set(body, { merge: true });
 
     res.json(user);
   } catch (error) {
